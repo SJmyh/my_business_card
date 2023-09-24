@@ -9,6 +9,26 @@ export const buildLoaders = (options: BuildProps): webpack.RuleSetRule[] => {
         exclude: /node_modules/,
     }
 
+    const svgLoader = {
+        test: /\.svg$/,
+        use: [{
+            loader: '@svgr/webpack',
+            options: {
+                icon: true,
+                svgoConfig: {
+                    plugins: [
+                        {
+                            name: 'convertColors',
+                            params: {
+                                currentColor: true,
+                            },
+                        },
+                    ],
+                },
+            },
+        }],
+    };
+
     const scssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -29,6 +49,7 @@ export const buildLoaders = (options: BuildProps): webpack.RuleSetRule[] => {
     }
 
     return [
+        svgLoader,
         typescriptLoader,
         scssLoader
     ]
