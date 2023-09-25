@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import cl from './Navbar.module.scss';
 import { HStack } from "@/shared/ui/Stack";
+import { AppLink } from "@/shared/ui/AppLink";
 
 export const Navbar = () => {
     return (
-        <HStack 
+        <HStack
             justify="between"
             className={cl.navbar}
         >
@@ -13,11 +14,11 @@ export const Navbar = () => {
             </div>
 
             <div className={cl.links}>
-                <Link to={'/'}>Обо мне</Link>
-                <Link to={'/about'}>Навыки</Link>
-                <Link to={'/about'}>Портфолио</Link>
-                <Link to={'/about'}>Опыт</Link>
-                <Link to={'/about'}>Контакты</Link>
+                <AppLink to={'/'}>Обо мне</AppLink>
+                <AppLink to={'/about'}>Навыки</AppLink>
+                <AppLink to={'/about'}>Портфолио</AppLink>
+                <AppLink to={'/about'}>Опыт</AppLink>
+                <AppLink to={'/about'}>Контакты</AppLink>
             </div>
 
             <div className={cl.logo}>
