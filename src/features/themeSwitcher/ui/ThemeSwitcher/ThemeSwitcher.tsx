@@ -1,10 +1,11 @@
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cl from "./ThemeSwitcher.module.scss";
-import { memo, useCallback, useState } from "react";
+import { memo, useCallback } from "react";
 import { VStack } from "@/shared/ui/Stack";
 import Moon from "@/shared/assets/icons/themeSwitcher/moon.svg";
 import Sun from "@/shared/assets/icons/themeSwitcher/sun.svg";
 import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
+import { Icon } from "@/shared/ui/Icon";
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -23,16 +24,15 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
             justify="center"
             onClick={onToggleHandler}
         >
-            <span>Change theme</span>
-            {/* {
-                value
+            {
+                theme === 'app_dark_theme'
                     ?
                     <VStack
-                        className={classNames(cl.button, { [cl.left]: value }, [])}
+                        className={classNames(cl.button, {}, [cl.left])}
                         justify="center"
                         align="center"
                     >
-                        <Moon />
+                        <Icon Svg={Moon} />
                     </VStack>
                     :
                     <VStack
@@ -40,9 +40,9 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
                         justify="center"
                         align="center"
                     >
-                        <Sun />
+                        <Icon Svg={Sun} />
                     </VStack>
-            } */}
+            }
         </VStack>
     )
 })
