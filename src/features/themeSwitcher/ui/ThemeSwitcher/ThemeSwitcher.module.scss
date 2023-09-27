@@ -12,16 +12,14 @@
 	user-select: none;
 }
 
-.button{
+.buttonWrapper{
     width: 36px;
     height: 36px;
     border-radius: 100%;
-    background: white;
     margin-left: 2px;
     margin-right: 2px;
 }
 
-.left{
-    margin-left: auto;
+.buttonActive{
+    background: white;
 }
-

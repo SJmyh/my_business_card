@@ -1,7 +1,7 @@
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cl from "./ThemeSwitcher.module.scss";
 import { memo, useCallback } from "react";
-import { VStack } from "@/shared/ui/Stack";
+import { HStack, VStack } from "@/shared/ui/Stack";
 import Moon from "@/shared/assets/icons/themeSwitcher/moon.svg";
 import Sun from "@/shared/assets/icons/themeSwitcher/sun.svg";
 import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
@@ -27,21 +27,39 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
             {
                 theme === 'app_dark_theme'
                     ?
-                    <VStack
-                        className={classNames(cl.button, {}, [cl.left])}
-                        justify="center"
-                        align="center"
-                    >
-                        <Icon Svg={Moon} />
-                    </VStack>
+                    <HStack justify="between" max>
+                        <VStack
+                            className={classNames('', {}, [cl.buttonWrapper])}
+                            justify="center"
+                            align="center"
+                        >
+                            <Icon width={'26'} height={'26'} Svg={Sun} />
+                        </VStack>
+                        <VStack
+                            className={classNames(cl.buttonActive, {}, [cl.buttonWrapper])}
+                            justify="center"
+                            align="center"
+                        >
+                            <Icon width={'26'} height={'26'} Svg={Moon} />
+                        </VStack>
+                    </HStack>
                     :
-                    <VStack
-                        className={classNames(cl.button, {}, [])}
-                        justify="center"
-                        align="center"
-                    >
-                        <Icon Svg={Sun} />
-                    </VStack>
+                    <HStack justify="between" max>
+                        <VStack
+                            className={classNames(cl.buttonActive, {}, [cl.buttonWrapper])}
+                            justify="center"
+                            align="center"
+                        >
+                            <Icon width={'26'} height={'26'} Svg={Sun} />
+                        </VStack>
+                        <VStack
+                            className={classNames('', {}, [cl.buttonWrapper])}
+                            justify="center"
+                            align="center"
+                        >
+                            <Icon width={'26'} height={'26'} Svg={Moon} />
+                        </VStack>
+                    </HStack>
             }
         </VStack>
     )
