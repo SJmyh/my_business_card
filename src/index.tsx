@@ -3,6 +3,7 @@ import { App } from '@/app/ui/App';
 import '@/app/styles/index.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { StoreProvider } from './app/providers/store';
+import { ThemeProvider } from './app/providers/ThemeProvider';
 
 const container = document.getElementById('root');
 
@@ -14,7 +15,9 @@ const root = createRoot(container);
 root.render(
     <StoreProvider>
         <BrowserRouter>
-            <App />
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
         </BrowserRouter>
     </StoreProvider>,
 );

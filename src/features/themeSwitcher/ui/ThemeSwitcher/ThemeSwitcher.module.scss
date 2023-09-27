@@ -1,0 +1,21 @@
+.switch{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: var(--accent-color);
+    cursor: pointer;
+}
+
+.button{
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background: white;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.left{
+    margin-left: auto;
+}
+
