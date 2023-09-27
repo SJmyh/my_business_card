@@ -1,0 +1,21 @@
+.MyPhoto{
+    position: relative;
+    height: calc(100vh - var(--navbar-height));
+    width: 800px;
+}
+
+.block{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--accent-color);
+    width: 550px;
+    height: 100%;
+}
+
+.photo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 650px;
+}

@@ -53,6 +53,7 @@ export const Slider = memo((props: SliderProps) => {
 
             <VStack className={cl.rightArrow}>
                 <Icon
+                    fill='red'
                     Svg={Arrow}
                     clickable
                     onClick={nextElem}

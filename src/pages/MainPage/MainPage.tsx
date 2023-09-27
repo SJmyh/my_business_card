@@ -1,24 +1,22 @@
 import { classNames } from "@/shared/lib/classNames/classNames"
-import photo from '@/shared/assets/icons/myPhotoTwo.png';
 import { Slider } from "@/shared/ui/Slider/Slider";
+import cl from './MainPage.module.scss';
+import { HStack, VStack } from "@/shared/ui/Stack";
+import { MyPhoto } from "@/shared/ui/MyPhoto/MyPhoto";
+import { SliderMainPage } from "@/widgets/sliderMainPage";
 
 const MainPage = () => {
     return (
-        <div className={classNames('', {}, [])}>
-            Main page
+        <HStack
+            className={classNames(cl.mainPage, {}, ['container'])}
+            align="start"
+        >
+            <VStack maxHeight justify="center">
+                <SliderMainPage />
+            </VStack>
 
-            <Slider
-                elems={[
-                    <div style={{width: '300px', height: '300px', background: "red"}}>1</div>,
-                    <div style={{width: '300px', height: '300px', background: "blue"}}>2</div>,
-                    <div style={{width: '300px', height: '300px', background: "yellow"}}>3</div>,
-                    <div style={{width: '300px', height: '300px', background: "green"}}>4</div>,
-                    <div style={{width: '300px', height: '300px', background: "pink"}}>5</div>,
-                ]}
-            />
-
-            <img src={photo} />
-        </div>
+            <MyPhoto />
+        </HStack>
     )
 }
 

@@ -1,5 +1,9 @@
-.icon {
-    fill: var(--icon-color);
+.default{
+    fill: var(--text-color);
+}
+
+.invert{
+    fill: black;
 }
 
 .button {

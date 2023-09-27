@@ -4,9 +4,12 @@ import cl from './Icon.module.scss';
 
 type SVGProps = Omit<React.SVGProps<SVGSVGElement>, 'onClick'>;
 
+type SVGVariatn = "default" | "dark";
+
 interface IconBaseProps extends SVGProps {
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
+    variant?: SVGVariatn;
 }
 
 interface NonClickableIconProps extends IconBaseProps {
@@ -27,12 +30,13 @@ export const Icon = memo((props: IconProps) => {
         width = 32,
         height = 32,
         clickable,
+        variant = 'default',
         ...otherProps
     } = props;
 
     const icon = (
         <Svg
-            className={classNames(cl.icon, {}, [className])}
+            className={classNames("", { }, [className, cl[variant]])}
             width={width}
             height={height}
             {...otherProps}
