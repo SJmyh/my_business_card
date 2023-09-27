@@ -33,14 +33,14 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
                             justify="center"
                             align="center"
                         >
-                            <Icon width={'26'} height={'26'} Svg={Sun} />
+                            <Icon width={'26'} height={'26'} Svg={Sun} variant="dark" />
                         </VStack>
                         <VStack
                             className={classNames(cl.buttonActive, {}, [cl.buttonWrapper])}
                             justify="center"
                             align="center"
                         >
-                            <Icon width={'26'} height={'26'} Svg={Moon} />
+                            <Icon width={'26'} height={'26'} Svg={Moon} variant="dark" />
                         </VStack>
                     </HStack>
                     :
@@ -50,14 +50,14 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
                             justify="center"
                             align="center"
                         >
-                            <Icon width={'26'} height={'26'} Svg={Sun} />
+                            <Icon width={'26'} height={'26'} Svg={Sun} variant="dark" />
                         </VStack>
                         <VStack
                             className={classNames('', {}, [cl.buttonWrapper])}
                             justify="center"
                             align="center"
                         >
-                            <Icon width={'26'} height={'26'} Svg={Moon} />
+                            <Icon width={'26'} height={'26'} Svg={Moon} variant="dark"/>
                         </VStack>
                     </HStack>
             }
