@@ -4,6 +4,7 @@ import { HStack } from "@/shared/ui/Stack";
 import { AppLink } from "@/shared/ui/AppLink";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Logo } from "@/shared/ui/Logo/Logo";
+import { ThemeSwitcher } from "@/features/themeSwitcher";
 
 export const Navbar = () => {
     return (
@@ -23,9 +24,7 @@ export const Navbar = () => {
                 <AppLink to={'/about'}>Контакты</AppLink>
             </HStack>
 
-            <div className={cl.logo}>
-                THEME SWITCHER
-            </div>
+            <ThemeSwitcher />
         </HStack>
     )
 }
