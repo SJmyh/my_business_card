@@ -5,6 +5,7 @@ import { AppLink } from "@/shared/ui/AppLink";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Logo } from "@/shared/ui/Logo/Logo";
 import { ThemeSwitcher } from "@/features/themeSwitcher";
+import { Text } from "@/shared/ui/Text";
 
 export const Navbar = () => {
     return (
@@ -17,11 +18,11 @@ export const Navbar = () => {
             <HStack
                 gap="32"
             >
-                <AppLink to={'/'}>Обо мне</AppLink>
-                <AppLink to={'/about'}>Навыки</AppLink>
-                <AppLink to={'/about'}>Портфолио</AppLink>
-                <AppLink to={'/about'}>Опыт</AppLink>
-                <AppLink to={'/about'}>Контакты</AppLink>
+                <AppLink to={'/'}><Text size="s" title="Обо мне" /></AppLink>
+                <AppLink to={'/about'}><Text size="s" title="Навыки" /></AppLink>
+                <AppLink to={'/about'}><Text size="s" title="Портфолио" /></AppLink>
+                <AppLink to={'/about'}><Text size="s" title="Опыт" /></AppLink>
+                <AppLink to={'/about'}><Text size="s" title="Контакты" /></AppLink>
             </HStack>
 
             <ThemeSwitcher />

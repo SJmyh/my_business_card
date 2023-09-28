@@ -1,11 +1,28 @@
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cl from './AboutPage.module.scss';
+import { MyPhoto } from '@/shared/ui/MyPhoto/MyPhoto';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { SliderMainPage } from '@/widgets/sliderMainPage';
 
-const AboutPage = () => {
-    return (
-        <div className={classNames('', {}, [])}>
-            Aboutpage
-        </div>
-    )
+interface AboutPageProps {
+    className?: string;
 }
 
-export default AboutPage;
+const AboutPage = memo(({ className }: AboutPageProps) => {
+    return (
+        <HStack
+            className={classNames(cl.mainPage, {}, ['container'])}
+            align="start"
+            justify='between'
+        >
+            <VStack maxHeight justify="center">
+                <SliderMainPage />
+            </VStack>
+
+            <MyPhoto />
+        </HStack>
+    );
+});
+
+export default AboutPage

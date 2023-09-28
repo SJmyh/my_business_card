@@ -1,6 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cl from './Logo.module.scss';
 import { HStack, VStack } from '../Stack';
+import { Text } from '../Text';
 
 export const Logo = () => {
     return (
@@ -9,7 +10,7 @@ export const Logo = () => {
             justify='center'
         >
             <VStack align='center'>
-                Shestopalov
+                <Text size="xs" title="Shestopalov" />
             </VStack>
         </HStack>
     )
