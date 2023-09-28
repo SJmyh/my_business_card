@@ -14,6 +14,7 @@ const AboutPage = memo(({ className }: AboutPageProps) => {
         <HStack
             className={classNames(cl.mainPage, {}, ['container'])}
             align="start"
+            justify='between'
         >
             <VStack maxHeight justify="center">
                 <SliderMainPage />

@@ -20,7 +20,7 @@ export const Title = memo((props: TitleProps) => {
     } = props;
 
     return (
-        <HStack className={classNames(cl.Title, {}, [className])}>
+        <HStack className={classNames(cl.Title, {}, [className])} max>
             {
                 (position === 'center' || position === 'end') &&
                 <div className={classNames(cl.line, {}, [])} />
@@ -33,6 +33,7 @@ export const Title = memo((props: TitleProps) => {
                 }, [])}
                 title={title}
                 size='xl'
+                variant='optional_light'
             />
 
             {
