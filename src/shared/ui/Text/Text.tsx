@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cl from './Text.module.scss';
 
-export type TextAlign = 'left' | 'right' | 'center';
+export type TextAlign = 'left' | 'right' | 'center' | 'justify';
 export type TextVariant = 'default' | 'optional' | 'optional_light';
 export type TextSize = 'xs' | 's' | 'm' | 'l' | 'xl';
 type HeaderTagType = 'h1' | 'h2' | 'h3';
