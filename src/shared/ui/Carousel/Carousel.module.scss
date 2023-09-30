@@ -1,16 +1,22 @@
 .wrapper{
     display: flex;
     align-items: center;
-    width: 100%;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 .itemsWrapper{
     overflow: hidden;
-    width: 100%;
+    position: relative;
+    width: calc(100% - 64px);
+    height: 40px;
 }
 
 .itemsBlock{
-    position: relative;
+    position: absolute;
+    min-width: 100%;
+    max-width: 100%;
     left: 0px;
     display: flex;
     gap: 8px;

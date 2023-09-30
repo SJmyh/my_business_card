@@ -3,11 +3,18 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cl from './PortfolioListItem.module.scss';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
-import { Slider } from '@/shared/ui/Slider/Slider';
+import { Carousel } from "@/shared/ui/Carousel/Carousel";
+import babel from '@/shared/assets/icons/instruments/babel.png';
+import css from '@/shared/assets/icons/instruments/css.png';
+import eslint from '@/shared/assets/icons/instruments/eslint.png';
+import html from '@/shared/assets/icons/instruments/html.png';
+import js from '@/shared/assets/icons/instruments/js.png';
+import scss from '@/shared/assets/icons/instruments/scss.png';
+import ts from '@/shared/assets/icons/instruments/ts.png';
 
 export interface ProjectProps {
     title: string,
-    about: string,
+    about: string[],
     stacks: any,
     screen: any,
 }
@@ -60,9 +67,10 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                     />
 
                     <Text
-                        text={project.title}
+                        title={project.title}
                         align='justify'
-                        size='xs'
+                        size='m'
+                        bold
                     />
                 </HStack>
 
@@ -77,16 +85,23 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                         size='xs'
                     />
 
-                    <Text
-                        text={project.about}
-                        align='justify'
-                        size='xs'
-                    />
+                    <VStack gap='16'>
+                        {
+                            project.about.map(par =>
+                                <Text
+                                    text={par}
+                                    align='justify'
+                                    size='xs'
+                                />
+                            )
+                        }
+                    </VStack>
                 </HStack>
 
                 <HStack
-                    gap='32'
                     align='start'
+                    gap='32'
+                    max
                 >
                     <Text
                         className={cl.body_title}
@@ -95,10 +110,30 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                         size='xs'
                     />
 
-                    <Slider
-                        className={classNames(cl.SliderMainPage, {}, [className])}
-                        elems={[...returnIcons()]}
-                    />
+                    <HStack
+                        max
+                    >
+                        <Carousel
+                            items={
+                                [
+                                    <img src={babel} />,
+                                    <img src={css} />,
+                                    <img src={eslint} />,
+                                    <img src={html} />,
+                                    <img src={js} />,
+                                    <img src={scss} />,
+                                    <img src={ts} />,
+                                    <img src={babel} />,
+                                    <img src={css} />,
+                                    <img src={eslint} />,
+                                    <img src={html} />,
+                                    <img src={js} />,
+                                    <img src={scss} />,
+                                    <img src={ts} />,
+                                ]
+                            }
+                        />
+                    </HStack>
                 </HStack>
             </VStack>
         </HStack>
