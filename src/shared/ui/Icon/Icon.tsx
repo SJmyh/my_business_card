@@ -4,7 +4,7 @@ import cl from './Icon.module.scss';
 
 type SVGProps = Omit<React.SVGProps<SVGSVGElement>, 'onClick'>;
 
-type SVGVariatn = "default" | "dark";
+type SVGVariatn = "default" | "dark" | 'disabled';
 
 interface IconBaseProps extends SVGProps {
     className?: string;

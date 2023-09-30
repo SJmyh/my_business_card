@@ -17,101 +17,36 @@ export const Carousel = memo((props: CarouselProps) => {
     } = props;
 
     const wrapperRef = useRef<HTMLDivElement>(null);
-    const itemsLength = items.length;
-    const [width, setWidth] = useState<number | null>(null);
-    const [isCarousel, setIsCarousel] = useState<boolean | null>(null);
-    const [totalElements, setTotalElements] = useState<number>(0);
-    const [visibleItems, setVisibleItems] = useState<number[]>([]);
-    const [elements, setElements] = useState<ReactNode[] | null>(null);
+    const itemsWrapperRef = useRef<HTMLDivElement>(null);
 
     const onNext = useCallback(() => {
-        if (isCarousel) {
-            const newArr = visibleItems;
-            newArr.shift();
+        if (wrapperRef.current && itemsWrapperRef.current) {
+            const leftValue = Number(window.getComputedStyle(wrapperRef.current).getPropertyValue('left').replace('px', ''));
 
-            if (newArr[newArr.length - 1] === itemsLength - 1) {
-                newArr.push(0);
+            if (-leftValue + itemsWrapperRef.current.offsetWidth + 50 < wrapperRef.current.scrollWidth) {
+                wrapperRef.current.style.setProperty('left', `${leftValue - 50}px`);
             } else {
-                newArr.push(newArr[newArr.length - 1] + 1);
+                wrapperRef.current.style.setProperty('left', `${itemsWrapperRef.current.offsetWidth - wrapperRef.current.scrollWidth}px`);
             }
-
-            console.log('newArr ', newArr);
-
-            setVisibleItems([...newArr]);
         }
-    }, [visibleItems])
+    }, [wrapperRef, itemsWrapperRef])
 
     const onPrev = useCallback(() => {
-        if (isCarousel) {
-            const newArr = visibleItems;
-            newArr.pop();
-
-            if (newArr[0] === 0) {
-                newArr.unshift(itemsLength - 1);
-            } else {
-                newArr.unshift(newArr[0] - 1);
-            }
-
-            setVisibleItems([...newArr]);
-        }
-    }, [visibleItems])
-
-    useEffect(() => {
         if (wrapperRef.current) {
-            setWidth(wrapperRef.current.offsetWidth);
-        }
-    }, [])
+            const leftValue = Number(window.getComputedStyle(wrapperRef.current).getPropertyValue('left').replace('px', ''));
 
-    useEffect(() => {
-        if (width && width >= 114) {
-            const totalElements = Math.floor((width - 64) / 50);
-
-            if (totalElements >= itemsLength) {
-                setIsCarousel(false);
-                setTotalElements(totalElements);
+            if (leftValue + 50 > 0) {
+                wrapperRef.current.style.setProperty('left', `0px`);
             } else {
-                setIsCarousel(true);
-                setTotalElements(totalElements);
+                wrapperRef.current.style.setProperty('left', `${leftValue + 50}px`);
             }
         }
-    }, [width])
-
-    useEffect(() => {
-        if (isCarousel !== null) {
-            const visibleArr = [];
-
-            if (isCarousel) {
-                for (let i = 0; i < totalElements; i++) {
-                    visibleArr.push(i);
-                }
-
-                setVisibleItems(visibleArr);
-            } else {
-                for (let i = 0; i < itemsLength; i++) {
-                    visibleArr.push(i);
-                }
-
-                setVisibleItems(visibleArr);
-            }
-        }
-    }, [totalElements])
-
-    useEffect(() => {
-        if (visibleItems) {
-            let newContent: ReactNode[] = [];
-
-            visibleItems.map(item => {
-                newContent.push(items[item]);
-            })
-
-            setElements(newContent);
-        }
-    }, [visibleItems])
+    }, [wrapperRef]);
 
     return (
-        <div
+        <HStack
             className={classNames(cl.wrapper, {}, [className])}
-            ref={wrapperRef}
+            justify='between'
         >
             <VStack className={cl.leftArrow}>
                 <Icon
@@ -121,21 +56,27 @@ export const Carousel = memo((props: CarouselProps) => {
                 />
             </VStack>
 
-            <HStack justify='between' max>
-                {
-                    elements
-                }
-            </HStack>
+            <div
+                className={cl.itemsWrapper}
+                ref={itemsWrapperRef}
+            >
+                <div
+                    className={cl.itemsBlock}
+                    ref={wrapperRef}
+                >
+                    {
+                        items
+                    }
+                </div>
+            </div>
 
             <VStack className={cl.rightArrow}>
                 <Icon
-                    fill='red'
                     Svg={Arrow}
                     clickable
                     onClick={onNext}
                 />
             </VStack>
-        </div>
+        </HStack>
     )
-
 });
