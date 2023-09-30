@@ -42,6 +42,7 @@ export const HardSkills = memo(({ className }: HardSkillsProps) => {
                 {
                     skills.map(skill =>
                         <SkillsCard
+                            key={skill.text}
                             text={skill.text}
                             icons={skill.icons}
                         />

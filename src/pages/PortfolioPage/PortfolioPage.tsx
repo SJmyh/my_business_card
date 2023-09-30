@@ -3,7 +3,9 @@ import { VStack } from "@/shared/ui/Stack";
 import cl from './PortfolioPage.module.scss';
 import { Title } from "@/shared/ui/Title/Title";
 import { PortfolioList } from "@/widgets/PortfolioList";
-
+import { Carousel } from "@/shared/ui/Carousel/Carousel";
+import js from '@/shared/assets/icons/instruments/js.png';
+import ts from '@/shared/assets/icons/instruments/ts.png';
 
 interface PortfolioPageProps {
     className?: string;
@@ -26,6 +28,27 @@ const PortfolioPage = (props: PortfolioPageProps) => {
             />
 
             <PortfolioList />
+
+            <div style={{ width: '370px', background: 'red' }}>
+                <Carousel
+                    items={
+                        [
+                            <img src={js} />,
+                            <img src={ts} />,
+                            <img src={js} />,
+                            <img src={ts} />,
+                            <img src={js} />,
+                            <img src={ts} />,
+                            <img src={js} />,
+                            <img src={ts} />,
+                            <img src={js} />,
+                            <img src={ts} />,
+                            <img src={js} />,
+                            <img src={ts} />,
+                        ]
+                    }
+                />
+            </div>
         </VStack>
     );
 }

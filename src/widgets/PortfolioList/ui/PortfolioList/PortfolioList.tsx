@@ -37,6 +37,7 @@ export const PortfolioList = memo(({ className }: PortfolioListProps) => {
                 mockData.map(elem =>
                     <PortfolioListItem
                         project={elem}
+                        key={elem.title}
                     />
                 )
             }
