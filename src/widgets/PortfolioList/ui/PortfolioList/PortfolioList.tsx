@@ -15,13 +15,62 @@ const mockData: ProjectProps[] = [
     {
         title: 'Чат + VK UI',
         about: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.',
+            'Самый обычный чат с использованием VK UI',
+
         ],
         stacks: [js, ts],
         screen: screen_one,
-    }
+    },
+    {
+        title: 'Платформа со статьями',
+        about: [
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+            'Платформа со статьями',
+
+        ],
+        stacks: [js, ts],
+        screen: screen_one,
+    },
+    {
+        title: 'Видео-чат',
+        about: [
+            'Видео-чат',
+
+        ],
+        stacks: [js, ts],
+        screen: screen_one,
+    },
+    {
+        title: 'Интернет-магазин',
+        about: [
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+            'Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин Интернет-магазин ',
+        ],
+        stacks: [js, ts],
+        screen: screen_one,
+    },
 ]
 
 export const PortfolioList = memo(({ className }: PortfolioListProps) => {

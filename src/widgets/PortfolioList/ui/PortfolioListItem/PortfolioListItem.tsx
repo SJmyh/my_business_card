@@ -55,6 +55,8 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
             <VStack
                 className={cl.body}
                 gap='8'
+                justify='between'
+                maxHeight
             >
                 <HStack
                     gap='32'

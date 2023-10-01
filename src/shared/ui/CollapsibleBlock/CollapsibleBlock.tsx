@@ -1,4 +1,4 @@
-import { ReactNode, memo, useCallback, useState } from 'react';
+import { ReactNode, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cl from './CollapsibleBlock.module.scss';
 import { HStack, VStack } from '../Stack';
@@ -8,21 +8,33 @@ import Arrow from '@/shared/assets/icons/arrow.svg';
 interface CollapsibleBlockProps {
     className?: string;
     children?: ReactNode;
-    baseHeight?: string;
+    baseHeight?: number;
 }
 
 export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
     const {
-        baseHeight = '300px',
+        baseHeight = 300,
         children,
         className
     } = props;
 
-    const [isCollapsibel, setIsCollapsibel] = useState<boolean>(true);
+    const [isCollapsibel, setIsCollapsibel] = useState<boolean>(false);
+    const [collapse, setCollapse] = useState<boolean>(true);
+    const wrapperRef = useRef<HTMLDivElement>(null);
 
     const onCollapse = useCallback(() => {
-        setIsCollapsibel(!isCollapsibel);
-    }, [isCollapsibel]);
+        setCollapse(!collapse);
+    }, [collapse]);
+
+    useEffect(() => {
+        if (wrapperRef && wrapperRef.current) {
+            if (Number(wrapperRef.current.scrollHeight) <= baseHeight) {
+                setIsCollapsibel(false);
+            } else {
+                setIsCollapsibel(true);
+            }
+        }
+    }, [wrapperRef])
 
     return (
         <VStack
@@ -32,29 +44,37 @@ export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
             <div
                 className={cl.content}
                 style={{
-                    height: isCollapsibel ? baseHeight : "auto"
+                    height: isCollapsibel ? collapse ? `${baseHeight}px` : "auto" : 'auto'
                 }}
             >
-                {
-                    children
-                }
+                <div
+                    ref={wrapperRef}
+                >
+                    {
+                        children
+                    }
+                </div>
             </div>
 
-            <HStack
-                className={cl.arrowBlock}
-                max
-                justify='center'
-            >
-                <Icon
-                    className={cl.arrow}
-                    Svg={Arrow}
-                    clickable
-                    onClick={onCollapse}
-                    style={{
-                        transform: isCollapsibel ? 'rotate(90deg)' : 'rotate(-90deg)'
-                    }}
-                />
-            </HStack>
+            {
+                isCollapsibel && (
+                    <HStack
+                        className={cl.arrowBlock}
+                        max
+                        justify='center'
+                    >
+                        <Icon
+                            className={cl.arrow}
+                            Svg={Arrow}
+                            clickable
+                            onClick={onCollapse}
+                            style={{
+                                transform: collapse ? 'rotate(90deg)' : 'rotate(-90deg)'
+                            }}
+                        />
+                    </HStack>
+                )
+            }
         </VStack>
     );
 });
