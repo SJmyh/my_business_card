@@ -120,22 +120,7 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                     >
                         <Carousel
                             items={
-                                [
-                                    <img src={babel} />,
-                                    <img src={css} />,
-                                    <img src={eslint} />,
-                                    <img src={html} />,
-                                    <img src={js} />,
-                                    <img src={scss} />,
-                                    <img src={ts} />,
-                                    <img src={babel} />,
-                                    <img src={css} />,
-                                    <img src={eslint} />,
-                                    <img src={html} />,
-                                    <img src={js} />,
-                                    <img src={scss} />,
-                                    <img src={ts} />,
-                                ]
+                                returnIcons()
                             }
                         />
                     </HStack>
