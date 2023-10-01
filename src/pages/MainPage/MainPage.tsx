@@ -1,4 +1,5 @@
 import { AboutPage } from "../AboutPage";
+import { ContactsPage } from "../ContactsPage";
 import { ExperiencePage } from "../ExperiencePage";
 import { PortfolioPage } from "../PortfolioPage";
 import { SkillsPage } from "../SkillsPage";
@@ -10,6 +11,7 @@ const MainPage = () => {
             <SkillsPage />
             <PortfolioPage />
             <ExperiencePage />
+            <ContactsPage />
         </>
     )
 }
