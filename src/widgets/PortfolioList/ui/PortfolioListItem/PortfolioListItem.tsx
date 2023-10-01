@@ -11,6 +11,7 @@ import html from '@/shared/assets/icons/instruments/html.png';
 import js from '@/shared/assets/icons/instruments/js.png';
 import scss from '@/shared/assets/icons/instruments/scss.png';
 import ts from '@/shared/assets/icons/instruments/ts.png';
+import { CollapsibleBlock } from '@/shared/ui/CollapsibleBlock/CollapsibleBlock';
 
 export interface ProjectProps {
     title: string,
@@ -85,17 +86,19 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                         size='xs'
                     />
 
-                    <VStack gap='16'>
-                        {
-                            project.about.map(par =>
-                                <Text
-                                    text={par}
-                                    align='justify'
-                                    size='xs'
-                                />
-                            )
-                        }
-                    </VStack>
+                    <CollapsibleBlock>
+                        <VStack gap='16'>
+                            {
+                                project.about.map(par =>
+                                    <Text
+                                        text={par}
+                                        align='justify'
+                                        size='xs'
+                                    />
+                                )
+                            }
+                        </VStack>
+                    </CollapsibleBlock>
                 </HStack>
 
                 <HStack
