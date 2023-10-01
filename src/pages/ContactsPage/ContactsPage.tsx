@@ -33,6 +33,7 @@ const ContactsPage = memo(({ className }: ContactsPageProps) => {
 
     return (
         <VStack
+            id="contacts"
             className={classNames(cl.ContactsPage, {}, ['container', className])}
             gap='32'
         >

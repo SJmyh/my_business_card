@@ -12,6 +12,7 @@ interface ExperiencePageProps {
 const ExperiencePage = memo(({ className }: ExperiencePageProps) => {
     return (
         <VStack
+            id="experience"
             className={classNames(cl.experiencePage, {}, [className, 'container'])}
         >
             <Title

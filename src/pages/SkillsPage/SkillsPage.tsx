@@ -13,6 +13,7 @@ interface SkillsPageProps {
 const SkillsPage = memo(({ className }: SkillsPageProps) => {
     return (
         <VStack 
+            id="skills"
             className={classNames(cl.SkillsPage, {}, ['container', className])}
             gap='32'
         >
