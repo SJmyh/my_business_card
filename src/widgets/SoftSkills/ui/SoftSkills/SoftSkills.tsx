@@ -23,25 +23,7 @@ const skills = [
     },
     {
         text: 'И вообще очень хороший'
-    },
-    {
-        text: 'Коммуникабельность'
-    },
-    {
-        text: 'Умение обучаться'
-    },
-    {
-        text: 'Неконфликтность'
-    },
-    {
-        text: 'Красота'
-    },
-    {
-        text: 'Ум'
-    },
-    {
-        text: 'И вообще очень хороший'
-    },
+    }
 ]
 
 interface SoftSkillsProps {
@@ -64,6 +46,7 @@ export const SoftSkills = memo(({ className }: SoftSkillsProps) => {
                 {
                     skills.map(skill =>
                         <SkillsCard
+                            key={skill.text}
                             text={skill.text}
                         />
                     )

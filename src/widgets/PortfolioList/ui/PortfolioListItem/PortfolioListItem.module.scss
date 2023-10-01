@@ -1,0 +1,22 @@
+.PortfolioListItem{
+    padding: 32px;
+    border: 2px solid var(--accent-color-optional);
+    border-radius: 5px;
+}
+
+.body_title{
+    min-width: 140px;
+}
+
+.photoWrapper{
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.body{
+    width: calc(60% - 24px);
+}
+
+.photo{
+    width: 100%;
+}
