@@ -11,7 +11,12 @@ export const Navbar = () => {
         const targetElement = document.getElementById(id);
 
         if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: elementPosition - 28,
+                behavior: 'smooth'
+            })
         }
     }
 
@@ -23,26 +28,42 @@ export const Navbar = () => {
             <Logo />
 
             <HStack
-                gap="32"
+                justify='between'
+                className={cl.navbarItems}
             >
 
-                <div onClick={() => onSmooth('about')}>
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('about')}
+                >
                     <Text size="s" title="Обо мне" />
                 </div>
 
-                <div onClick={() => onSmooth('skills')}>
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('skills')}
+                >
                     <Text size="s" title="Навыки" />
                 </div>
 
-                <div onClick={() => onSmooth('portfolio')}>
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('portfolio')}
+                >
                     <Text size="s" title="Портфолио" />
                 </div>
 
-                <div onClick={() => onSmooth('experience')}>
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('experience')}
+                >
                     <Text size="s" title="Опыт" />
                 </div>
 
-                <div onClick={() => onSmooth('contacts')}>
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('contacts')}
+                >
                     <Text size="s" title="Контакты" />
                 </div>
             </HStack>
