@@ -14,7 +14,7 @@ export const Navbar = () => {
             const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
 
             window.scrollTo({
-                top: elementPosition - 28,
+                top: elementPosition - 34,
                 behavior: 'smooth'
             })
         }

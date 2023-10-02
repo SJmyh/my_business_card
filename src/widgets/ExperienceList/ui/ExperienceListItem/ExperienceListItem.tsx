@@ -60,12 +60,14 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
             </div>
 
             <HStack
-                justify='between'
+                // justify='between'
                 align='start'
+                gap='32'
                 max
             >
                 <VStack
                     justify='start'
+                    className={cl.leftColumn}
                     gap='24'
                 >
                     <HStack

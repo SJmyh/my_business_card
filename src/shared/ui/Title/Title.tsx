@@ -3,6 +3,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cl from './Title.module.scss';
 import { HStack } from '../Stack';
 import { Text } from '../Text';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 type PositionTitle = 'start' | 'center' | 'end';
 
@@ -19,8 +20,10 @@ export const Title = memo((props: TitleProps) => {
         position,
     } = props;
 
+    const { theme } = useTheme();
+
     return (
-        <HStack className={classNames(cl.Title, {}, [className])} max>
+        <HStack className={classNames(theme === 'app_light_theme' ? cl.TitleLight : cl.TitleDark, {}, [className])} max>
             {
                 (position === 'center' || position === 'end') &&
                 <div className={classNames(cl.line, {}, [])} />
@@ -33,7 +36,6 @@ export const Title = memo((props: TitleProps) => {
                 }, [])}
                 title={title}
                 size='xl'
-                variant='optional_light'
             />
 
             {
