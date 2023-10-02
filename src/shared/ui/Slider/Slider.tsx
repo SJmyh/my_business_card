@@ -1,4 +1,4 @@
-import { ReactNode, memo, useCallback, useEffect, useState } from 'react';
+import { ReactNode, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cl from './Slider.module.scss';
 import { HStack, VStack } from '../Stack';
@@ -45,10 +45,14 @@ export const Slider = memo((props: SliderProps) => {
                 />
             </VStack>
 
-            <VStack className={cl.slide}>
-                {
-                    elems?.[count]
-                }
+            <VStack className={cl.contentWrapper}>
+                <div
+                    className={cl.content}
+                >
+                    {
+                        elems?.[count]
+                    }
+                </div>
             </VStack>
 
             <VStack className={cl.rightArrow}>
