@@ -2,10 +2,19 @@
     width: 400px;
     max-height: 300px;
     text-align: center;
-    color: var(--text-color);
     font: var(--font-l);
+    color: var(--text-color);
 }
 
-.accentWord {
-    color: var(--accent-color-optional);
+.app_light_theme{
+    .accentWord{
+        color: var(--text-color);
+        background: var(--accent-color);
+    }
+}
+
+.app_dark_theme{
+    .accentWord{
+        color: var(--text-optional-light);
+    }
 }
