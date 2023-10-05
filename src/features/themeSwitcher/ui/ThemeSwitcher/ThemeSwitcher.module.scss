@@ -1,37 +1,3 @@
-// .switch{
-//     width: 80px;
-//     height: 40px;
-//     border-radius: 20px;
-//     background: var(--accent-color);
-//     cursor: pointer;
-
-//     -webkit-user-select: none;
-// 	-khtml-user-select: none;
-// 	-moz-user-select: none;
-// 	-ms-user-select: none;
-// 	user-select: none;
-// }
-
-// .buttonWrapper{
-//     width: 36px;
-//     height: 36px;
-//     border-radius: 100%;
-//     margin-left: 2px;
-//     margin-right: 2px;
-// }
-
-// .buttonActive{
-//     background: white;
-// }
-
-
-
-
-
-
-
-
-
 .switch {
   width: 70px;
   height: 40px;
@@ -55,4 +21,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .switch {
+    width: 50px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 3px;
+  }
+  
+  .handle {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+  }
 }

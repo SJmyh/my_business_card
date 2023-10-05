@@ -1,5 +1,5 @@
 import cl from './Navbar.module.scss';
-import { HStack } from "@/shared/ui/Stack";
+import { HStack, VStack } from "@/shared/ui/Stack";
 import { AppLink } from "@/shared/ui/AppLink";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Logo } from "@/shared/ui/Logo/Logo";
@@ -68,7 +68,15 @@ export const Navbar = () => {
                 </div>
             </HStack>
 
-            <ThemeSwitcher />
+            <HStack gap='16'>
+                <ThemeSwitcher />
+
+                <VStack className={cl.burger} justify='between'>
+                    <div className={cl.burger_one}/>
+                    <div className={cl.burger_two}/>
+                    <div className={cl.burger_three}/>
+                </VStack>
+            </HStack>
         </HStack>
     )
 }
