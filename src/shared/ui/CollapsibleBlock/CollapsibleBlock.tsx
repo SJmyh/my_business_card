@@ -21,9 +21,6 @@ export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    console.log(children);
-
-
     return (
         <VStack
             className={classNames(cl.CollapsibleBlock, {}, [className])}
