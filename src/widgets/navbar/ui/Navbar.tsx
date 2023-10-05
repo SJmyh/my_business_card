@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import cl from './Navbar.module.scss';
 import { HStack } from "@/shared/ui/Stack";
 import { AppLink } from "@/shared/ui/AppLink";
@@ -8,6 +7,19 @@ import { ThemeSwitcher } from "@/features/themeSwitcher";
 import { Text } from "@/shared/ui/Text";
 
 export const Navbar = () => {
+    const onSmooth = (id: string) => {
+        const targetElement = document.getElementById(id);
+
+        if (targetElement) {
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: elementPosition - 34,
+                behavior: 'smooth'
+            })
+        }
+    }
+
     return (
         <HStack
             justify="between"
@@ -16,13 +28,44 @@ export const Navbar = () => {
             <Logo />
 
             <HStack
-                gap="32"
+                justify='between'
+                className={cl.navbarItems}
             >
-                <AppLink to={'/'}><Text size="s" title="Обо мне" /></AppLink>
-                <AppLink to={'/about'}><Text size="s" title="Навыки" /></AppLink>
-                <AppLink to={'/about'}><Text size="s" title="Портфолио" /></AppLink>
-                <AppLink to={'/about'}><Text size="s" title="Опыт" /></AppLink>
-                <AppLink to={'/about'}><Text size="s" title="Контакты" /></AppLink>
+
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('about')}
+                >
+                    <Text size="s" title="Обо мне" />
+                </div>
+
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('skills')}
+                >
+                    <Text size="s" title="Навыки" />
+                </div>
+
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('portfolio')}
+                >
+                    <Text size="s" title="Портфолио" />
+                </div>
+
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('experience')}
+                >
+                    <Text size="s" title="Опыт" />
+                </div>
+
+                <div
+                    className={cl.item}
+                    onClick={() => onSmooth('contacts')}
+                >
+                    <Text size="s" title="Контакты" />
+                </div>
             </HStack>
 
             <ThemeSwitcher />

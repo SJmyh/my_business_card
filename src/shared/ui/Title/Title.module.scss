@@ -1,10 +1,21 @@
-.Title{
+.TitleLight{
+    .line{
+        background: black;   
+    }
 
+    .text{
+        background: var(--accent-color);
+    }
+}
+
+.TitleDark{
+    .line{
+        background: var(--accent-color-optional);   
+    }
 }
 
 .line{
     width: 100%;
-    background: var(--accent-color-optional);
     height: 2px;   
 }
 

@@ -15,6 +15,7 @@ const PortfolioPage = (props: PortfolioPageProps) => {
 
     return (
         <VStack
+            id="portfolio"
             className={classNames(cl.PortfolioPage, {}, ['container', className])}
             gap='32'
         >

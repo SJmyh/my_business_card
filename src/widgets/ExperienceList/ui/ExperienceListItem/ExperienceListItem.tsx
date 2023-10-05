@@ -34,14 +34,10 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
 
     const returnIcons = useCallback(() => {
         const icons: ReactNode[] = [];
-
-        console.log(stacks);
-
+        
         stacks.map((elem: any) => {
             icons.push(<img src={elem} />);
         })
-
-        console.log(icons);
 
         return icons;
     }, [stacks])
@@ -60,12 +56,14 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
             </div>
 
             <HStack
-                justify='between'
+                // justify='between'
                 align='start'
+                gap='32'
                 max
             >
                 <VStack
                     justify='start'
+                    className={cl.leftColumn}
                     gap='24'
                 >
                     <HStack

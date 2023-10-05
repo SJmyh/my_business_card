@@ -10,7 +10,7 @@ export const Logo = () => {
             justify='center'
         >
             <VStack align='center'>
-                <Text size="xs" title="Shestopalov" />
+                <Text size="m" title="Shestopalov" />
             </VStack>
         </HStack>
     )

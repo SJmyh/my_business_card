@@ -12,6 +12,7 @@ interface AboutPageProps {
 const AboutPage = memo(({ className }: AboutPageProps) => {
     return (
         <HStack
+            id="about"
             className={classNames(cl.mainPage, {}, ['container'])}
             align="start"
             justify='between'

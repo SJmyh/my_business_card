@@ -1,4 +1,16 @@
 .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000000;
     height: var(--navbar-height);
     background: var(--bg-navbar);
+}
+
+.navbarItems{
+    width: 800px;
+}
+
+.item{
+    cursor: pointer;
 }
