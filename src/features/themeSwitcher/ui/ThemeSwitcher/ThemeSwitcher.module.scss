@@ -1,25 +1,58 @@
-.switch{
-    width: 80px;
-    height: 40px;
-    border-radius: 20px;
-    background: var(--accent-color);
-    cursor: pointer;
+// .switch{
+//     width: 80px;
+//     height: 40px;
+//     border-radius: 20px;
+//     background: var(--accent-color);
+//     cursor: pointer;
 
-    -webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+//     -webkit-user-select: none;
+// 	-khtml-user-select: none;
+// 	-moz-user-select: none;
+// 	-ms-user-select: none;
+// 	user-select: none;
+// }
+
+// .buttonWrapper{
+//     width: 36px;
+//     height: 36px;
+//     border-radius: 100%;
+//     margin-left: 2px;
+//     margin-right: 2px;
+// }
+
+// .buttonActive{
+//     background: white;
+// }
+
+
+
+
+
+
+
+
+
+.switch {
+  width: 70px;
+  height: 40px;
+  background: var(--accent-color);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 5px;
+  cursor: pointer;
 }
 
-.buttonWrapper{
-    width: 36px;
-    height: 36px;
-    border-radius: 100%;
-    margin-left: 2px;
-    margin-right: 2px;
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
 }
 
-.buttonActive{
-    background: white;
+.handle {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

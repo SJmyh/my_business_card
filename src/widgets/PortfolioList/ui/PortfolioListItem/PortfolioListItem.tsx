@@ -73,6 +73,7 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                 <HStack
                     gap='32'
                     align='start'
+                    max
                 >
                     <Text
                         className={cl.body_title}
@@ -81,18 +82,27 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                         size='xs'
                     />
 
-                    <CollapsibleBlock>
-                        <VStack gap='16'>
-                            {
-                                project.about.map(par =>
-                                    <Text
-                                        text={par}
-                                        align='justify'
-                                        size='xs'
-                                    />
-                                )
-                            }
-                        </VStack>
+                    <CollapsibleBlock
+                        baseContent={<Text
+                            text={project.about[0]}
+                            align='justify'
+                            size='xs'
+                        />}
+                    >
+                        {
+                            (project.about.length > 1) &&
+                            <VStack gap='16'>
+                                {
+                                    project.about.map((par, index) =>
+                                        index !== 0 && <Text
+                                            text={par}
+                                            align='justify'
+                                            size='xs'
+                                        />
+                                    )
+                                }
+                            </VStack>
+                        }
                     </CollapsibleBlock>
                 </HStack>
 

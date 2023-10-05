@@ -25,3 +25,8 @@
 .leftArrow{
     transform: rotate(180deg);
 } 
+
+.leftArrow, .rightArrow{
+    width: 32px;
+    height: 32px;
+}

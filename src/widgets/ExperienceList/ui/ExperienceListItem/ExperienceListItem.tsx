@@ -34,14 +34,10 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
 
     const returnIcons = useCallback(() => {
         const icons: ReactNode[] = [];
-
-        console.log(stacks);
-
+        
         stacks.map((elem: any) => {
             icons.push(<img src={elem} />);
         })
-
-        console.log(icons);
 
         return icons;
     }, [stacks])

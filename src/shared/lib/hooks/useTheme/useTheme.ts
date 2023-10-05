@@ -14,9 +14,6 @@ export function useTheme(): UseThemeResult {
     const toggleTheme = () => {
         let newTheme: Theme;
 
-        console.log(theme);
-
-
         switch (theme) {
             case Theme.DARK:
                 newTheme = Theme.LIGHT;

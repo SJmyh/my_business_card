@@ -26,11 +26,6 @@ interface ContactsPageProps {
 const ContactsPage = memo(({ className }: ContactsPageProps) => {
     const { theme } = useTheme();
 
-    useEffect(() => {
-        console.log(theme);
-
-    }, [])
-
     return (
         <VStack
             id="contacts"
