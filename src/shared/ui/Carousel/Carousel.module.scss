@@ -1,0 +1,32 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.itemsWrapper{
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - 64px);
+    height: 40px;
+}
+
+.itemsBlock{
+    position: absolute;
+    min-width: 100%;
+    max-width: 100%;
+    left: 0px;
+    display: flex;
+    gap: 8px;
+}
+
+.leftArrow{
+    transform: rotate(180deg);
+} 
+
+.leftArrow, .rightArrow{
+    width: 32px;
+    height: 32px;
+}

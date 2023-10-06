@@ -2,9 +2,12 @@ import { CombinedState, ReducersMapObject, configureStore, Reducer } from '@redu
 import { StateSchema } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 import { $api } from '@/shared/api/api';
+import { counter2Reducer } from '@/entities/Counter2';
 
 export const createReduxStore = (initialState?: StateSchema) => {
-    const rootReducers: ReducersMapObject<StateSchema> = {};
+    const rootReducers: ReducersMapObject<StateSchema> = {
+        counter2: counter2Reducer
+    };
 
     const reducerManager = createReducerManager(rootReducers);
 

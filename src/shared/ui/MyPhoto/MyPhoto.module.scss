@@ -1,0 +1,116 @@
+.MyPhoto{
+    position: relative;
+    height: calc(100vh);
+    width: 1000px;
+    // width: 600px;
+}
+
+.block{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--accent-color);
+    width: 650px;
+    height: 100%;
+}
+
+.photo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 900px;
+    // height: 600px;
+}
+
+@media screen and (max-width: 1650px) {
+    .photo{
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .photo{
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .photo{
+        height: 600px;
+    }
+
+    .block{
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .photo{
+        height: 600px;
+    }
+
+    .block{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .photo{
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .photo{
+        // height: 500px;
+    }
+
+    .block{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .MyPhoto{
+        width: 550px;
+        margin-left: auto;
+    }
+
+    .photo{
+        // height: 500px;
+    }
+
+    .block{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .MyPhoto{
+        width: 650px;
+        margin-left: auto;
+    }
+
+    .photo{
+        // height: 580px;
+    }
+
+    .block{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .MyPhoto{
+        width: 550px;
+        margin-left: auto;
+    }
+
+    .photo{
+        // height: 500px;
+    }
+
+    .block{
+        width: 350px;
+    }
+}

@@ -1,0 +1,42 @@
+.FirstPage{
+    width: 380px;
+    max-height: 300px;
+    text-align: center;
+    font: var(--font-l);
+    color: var(--text-color);
+    margin: 0 auto;
+}
+
+.app_light_theme{
+    .accentWord{
+        color: var(--text-color);
+        background: var(--accent-color);
+    }
+}
+
+.app_dark_theme{
+    .accentWord{
+        color: var(--text-optional-light);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .FirstPage{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .FirstPage{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .app_light_theme{
+        .accentWord{
+            color: var(--accent-color-optional);
+            background: none;
+        }
+    }
+}

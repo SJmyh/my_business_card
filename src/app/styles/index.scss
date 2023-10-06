@@ -1,5 +1,31 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import "reset";
+@import "variables/global";
+@import "themes/dark";
+@import "themes/normal";
+
+.app {
+    font: var(--font-m);
+    min-height: 100vh;
+}
+
+.container{
+    padding: 0 140px 0 140px;
+}
+
+@media screen and (max-width: 1500px) {
+    .container{
+        padding: 0 100px 0 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        padding: 0 40px 0 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        padding: 0 20px 0 20px;
+    }
 }

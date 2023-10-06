@@ -1,0 +1,16 @@
+.SkillsCard{
+    border: 2px solid var(--accent-color-optional);
+    border-radius: 5px;
+    padding: 32px 20px;
+}
+
+.text{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+@media screen and (max-width: 1500px) {
+    .SkillsCard{
+        padding: 20px;
+    }
+}

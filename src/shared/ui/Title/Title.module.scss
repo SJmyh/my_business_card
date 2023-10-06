@@ -1,0 +1,32 @@
+.TitleLight{
+    .line{
+        background: black;   
+    }
+
+    .text{
+        background: var(--accent-color);
+    }
+}
+
+.TitleDark{
+    .line{
+        background: var(--accent-color-optional);   
+    }
+}
+
+.line{
+    width: 100%;
+    height: 2px;   
+}
+
+.text{
+    white-space: nowrap;
+}
+
+.left{
+    margin-left: 8px;
+}
+
+.right{
+    margin-right: 8px;
+}

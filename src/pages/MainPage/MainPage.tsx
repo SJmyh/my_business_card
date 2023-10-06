@@ -1,14 +1,18 @@
-import { Counter } from "@/entities/Counter"
-import { classNames } from "@/shared/lib/classNames/classNames"
-import { useEffect } from "react"
+import { AboutPage } from "../AboutPage";
+import { ContactsPage } from "../ContactsPage";
+import { ExperiencePage } from "../ExperiencePage";
+import { PortfolioPage } from "../PortfolioPage";
+import { SkillsPage } from "../SkillsPage";
 
 const MainPage = () => {
     return (
-        <div className={classNames('', {}, [])}>
-            Main page
-
-            <Counter />
-        </div>
+        <>
+            <AboutPage />
+            <SkillsPage />
+            <PortfolioPage />
+            <ExperiencePage />
+            <ContactsPage />
+        </>
     )
 }
 
