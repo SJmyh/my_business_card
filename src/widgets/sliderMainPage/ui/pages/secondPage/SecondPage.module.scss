@@ -31,3 +31,12 @@
         width: 180px;
     }
 }
+
+@media screen and (max-width: 780px) {
+    .app_light_theme{
+        .accentWord{
+            color: var(--accent-color-optional);
+            background: none;
+        }
+    }
+}

@@ -9,7 +9,7 @@ const MainPage = () => {
         <>
             <AboutPage />
             <SkillsPage />
-            {/* <PortfolioPage /> */}
+            <PortfolioPage />
             {/* <ExperiencePage /> */}
             {/* <ContactsPage /> */}
         </>
