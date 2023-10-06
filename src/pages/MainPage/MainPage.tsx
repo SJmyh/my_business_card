@@ -8,7 +8,7 @@ const MainPage = () => {
     return (
         <>
             <AboutPage />
-            {/* <SkillsPage /> */}
+            <SkillsPage />
             {/* <PortfolioPage /> */}
             {/* <ExperiencePage /> */}
             {/* <ContactsPage /> */}

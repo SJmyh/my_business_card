@@ -27,6 +27,7 @@ const SkillsPage = memo(({ className }: SkillsPageProps) => {
                 max
                 gap='32'
                 align='start'
+                className={cl.skillsPageMainBlock}
             >
                 <HardSkills />
                 <SoftSkills />
