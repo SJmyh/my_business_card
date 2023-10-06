@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cl from './SliderMainPage.module.scss';
+import cl from './SliderMainPageStyle.module.scss';
 import { Slider } from '@/shared/ui/Slider/Slider';
 import { FirstPage } from '../pages/firstPage/FirstPage';
 import { SecondPage } from '../pages/secondPage/SecondPage';
