@@ -34,7 +34,7 @@ export const Carousel = memo((props: CarouselProps) => {
                     bias += 2;
                 } else {
                     wrapperRef.current.style.setProperty('left', `${itemsWrapperRef.current.offsetWidth - wrapperRef.current.scrollWidth}px`);
-                    setNextButtonVisible(false);
+                    // setNextButtonVisible(false);
                     clearInterval(inteval);
                 }
 
@@ -57,7 +57,7 @@ export const Carousel = memo((props: CarouselProps) => {
                     clearInterval(inteval);
                 } else {
                     wrapperRef.current.style.setProperty('left', `${leftValue + 2}px`);
-                    setPrevButtonVisible(false);
+                    // setPrevButtonVisible(false);
                     bias += 2;
                 }
 

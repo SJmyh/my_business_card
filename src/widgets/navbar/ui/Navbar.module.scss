@@ -14,3 +14,39 @@
 .item{
     cursor: pointer;
 }
+
+.burger{
+    display: none !important;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger_one, .burger_two, .burger_three{
+    width: 40px;
+    height: 4px;
+
+    background: var(--text-color);
+}
+
+@media screen and (max-width: 1500px) {
+    .navbarItems{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .navbarItems{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbarItems{
+        display: none !important;
+    }
+
+    .burger{
+        display: flex !important;
+    }
+}

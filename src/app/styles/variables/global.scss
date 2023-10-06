@@ -33,3 +33,51 @@
 
     // Цвета
 }
+
+@media screen and (max-width: 1500px) {
+    :root {
+        // size xs
+        --font-size-xs: 16px;
+        --font-line-xs: 22px;
+        --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+    
+        // size s
+        --font-size-s: 20px;
+        --font-line-s: 28px;
+        --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+    
+        // size m
+        --font-size-m: 22px;
+        --font-line-m: 30px;
+        --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    
+        // size l
+        --font-size-l: 28px;
+        --font-line-l: 36px;
+        --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+    
+        // size xl
+        --font-size-xl: 40px;
+        --font-line-xl: 48px;
+        --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+    
+        // Размеры
+        --navbar-height: 60px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    :root {
+        // size l
+        --font-size-l: 22px;
+        --font-line-l: 30px;
+        --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        // Размеры
+        --navbar-height: 50px;
+    }
+}

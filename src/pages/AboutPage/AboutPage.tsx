@@ -17,7 +17,7 @@ const AboutPage = memo(({ className }: AboutPageProps) => {
             align="start"
             justify='between'
         >
-            <VStack maxHeight justify="center">
+            <VStack className={cl.slider} maxHeight justify="center">
                 <SliderMainPage />
             </VStack>
 

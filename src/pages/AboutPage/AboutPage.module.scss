@@ -2,3 +2,33 @@
     background: var(--bg-about);
     height: calc(100vh);
 }
+
+@media screen and (max-width: 1150px) {
+    .mainPage{
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .slider{
+        position: absolute;
+    }
+
+    .mainPage{
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .slider{
+        width: calc(100% - 80px);
+        justify-content: end;
+        bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .slider{
+        width: calc(100% - 40px);
+    }
+}

@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }
   
 .next,
@@ -53,3 +55,22 @@
     align-items: center;
     cursor: pointer;
 }  
+
+@media screen and (max-width: 1300px) {
+    .exampleContainer {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .exampleContainer {
+        width: 300px;
+    }
+
+    .next,
+    .prev {
+        top: calc(50% - 15px);
+        width: 30px;
+        height: 30px;
+    }
+}

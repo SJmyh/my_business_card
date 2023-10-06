@@ -60,6 +60,7 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
                 align='start'
                 gap='32'
                 max
+                className={cl.experienceBlocks}
             >
                 <VStack
                     justify='start'
@@ -74,6 +75,7 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
                             text='Компания: '
                             variant='optional'
                             size='xs'
+                            className={cl.titleBlock}
                         />
 
                         <Text
@@ -91,6 +93,7 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
                             text='Должность: '
                             variant='optional'
                             size='xs'
+                            className={cl.titleBlock}
                         />
 
                         <Text
@@ -110,6 +113,7 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
                             text='Задачи: '
                             variant='optional'
                             size='xs'
+                            className={cl.titleBlock}
                         />
 
                         <VStack
