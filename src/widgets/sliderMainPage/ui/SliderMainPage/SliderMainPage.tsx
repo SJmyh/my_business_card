@@ -11,12 +11,13 @@ interface SliderMainPageProps {
 
 export const SliderMainPage = memo(({ className }: SliderMainPageProps) => {
     return (
-        <Slider
-            className={classNames(cl.SliderMainPage, {}, [className])}
-            elems={[
-                <FirstPage />,
-                <SecondPage />
-            ]}
-        />
+        <div className={classNames(cl.SliderMainPage, {}, [className])}>
+            <Slider
+                elems={[
+                    <FirstPage />,
+                    <SecondPage />
+                ]}
+            />
+        </div>
     );
 });

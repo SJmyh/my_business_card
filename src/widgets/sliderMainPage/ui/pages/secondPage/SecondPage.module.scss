@@ -19,3 +19,15 @@
         color: var(--text-optional-light);
     }
 }
+
+@media screen and (max-width: 1300px) {
+    .SecondPage{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .SecondPage{
+        width: 180px;
+    }
+}

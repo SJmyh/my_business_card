@@ -7,11 +7,11 @@ import { SkillsPage } from "../SkillsPage";
 const MainPage = () => {
     return (
         <>
-            {/* <AboutPage />
-            <SkillsPage />
-            <PortfolioPage />
-            <ExperiencePage />
-            <ContactsPage /> */}
+            <AboutPage />
+            {/* <SkillsPage /> */}
+            {/* <PortfolioPage /> */}
+            {/* <ExperiencePage /> */}
+            {/* <ContactsPage /> */}
         </>
     )
 }
