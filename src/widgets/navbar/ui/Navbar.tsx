@@ -1,11 +1,10 @@
 import cl from './Navbar.module.scss';
-import { HStack, VStack } from "@/shared/ui/Stack";
-import { AppLink } from "@/shared/ui/AppLink";
+import { HStack } from "@/shared/ui/Stack";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Logo } from "@/shared/ui/Logo/Logo";
 import { ThemeSwitcher } from "@/features/themeSwitcher";
 import { Text } from "@/shared/ui/Text";
-import { Burger } from '@/features/burger/ui/Burger/Burger';
+import { Burger } from '@/features/burger';
 import { onSmooth } from '@/shared/lib/onSmooth/onSmooth';
 
 export const Navbar = () => {
