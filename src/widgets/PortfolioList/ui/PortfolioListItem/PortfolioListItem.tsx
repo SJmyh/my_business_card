@@ -98,7 +98,7 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                                             text={par}
                                             align='justify'
                                             size='xs'
-                                            key={par}
+                                            key={index}
                                         />
                                     )
                                 }

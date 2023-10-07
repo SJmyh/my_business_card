@@ -62,7 +62,7 @@ export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
                                     className={cl.arrow}
                                     Svg={Arrow}
                                     style={{
-                                        transform: isOpen ? 'rotate(90deg)' : 'rotate(-90deg)'
+                                        transform: isOpen ? 'rotate(-90deg)' : 'rotate(90deg)'
                                     }}
                                 />
                             </HStack>
