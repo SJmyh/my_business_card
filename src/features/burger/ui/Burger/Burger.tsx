@@ -6,10 +6,10 @@ import { useDimensions } from '@/shared/lib/hooks/useDimensions/useDimensions';
 import { Text } from '@/shared/ui/Text';
 import { VStack } from '@/shared/ui/Stack';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
+import { onSmooth } from '@/shared/lib/onSmooth/onSmooth';
 
 interface BurgerProps {
     className?: string;
-    onSmooth: (value: string) => void;
 }
 
 const sidebar = {
@@ -32,7 +32,7 @@ const sidebar = {
     }
 };
 
-export const Burger = memo(({ className, onSmooth }: BurgerProps) => {
+export const Burger = memo(({ className }: BurgerProps) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
@@ -40,7 +40,7 @@ export const Burger = memo(({ className, onSmooth }: BurgerProps) => {
     const { theme } = useTheme();
 
     const onClose = useCallback((id: string) => {
-        onSmooth(id);
+        onSmooth(id, 34);
         toggleOpen();
     }, [onSmooth, toggleOpen])
 

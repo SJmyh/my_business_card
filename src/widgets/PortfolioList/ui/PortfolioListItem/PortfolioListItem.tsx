@@ -16,12 +16,14 @@ export interface ProjectProps {
 interface PortfolioListItemProps {
     className?: string;
     project: ProjectProps;
+    index: number;
 }
 
 export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
     const {
         project,
-        className
+        className,
+        index
     } = props;
 
     const returnIcons = useCallback(() => {
@@ -37,6 +39,7 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
     return (
         <HStack
             className={classNames(cl.PortfolioListItem, {}, [className])}
+            id={`portfolio_${index}`}
             max
             gap='24'
             align='start'
@@ -83,6 +86,7 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                     />
 
                     <CollapsibleBlock
+                        id={`portfolio_${index}`}
                         baseContent={<Text
                             text={project.about[0]}
                             align='justify'

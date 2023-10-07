@@ -1,15 +1,17 @@
-import { ReactNode, memo, useState } from 'react';
+import { ReactNode, memo, useCallback, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cl from './CollapsibleBlock.module.scss';
 import Arrow from '@/shared/assets/icons/arrow.svg';
 import { motion, AnimatePresence } from "framer-motion";
 import { HStack, VStack } from '../Stack';
 import { Icon } from '../Icon';
+import { onSmooth } from '@/shared/lib/onSmooth/onSmooth';
 
 interface CollapsibleBlockProps {
     className?: string;
     children?: ReactNode;
     baseContent: ReactNode;
+    id: string;
 }
 
 export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
@@ -17,9 +19,18 @@ export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
         className,
         children,
         baseContent,
+        id
     } = props;
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const onChangeOpen = useCallback(() => {
+        setIsOpen(!isOpen);
+
+        if (isOpen) {
+            onSmooth(id, 60);
+        }
+    }, [setIsOpen, id, onSmooth, isOpen])
 
     return (
         <VStack
@@ -51,7 +62,7 @@ export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
                         </AnimatePresence>
                         <motion.header
                             initial={false}
-                            onClick={() => setIsOpen(!isOpen)}
+                            onClick={() => onChangeOpen()}
                         >
                             <HStack
                                 className={cl.arrowBlock}
