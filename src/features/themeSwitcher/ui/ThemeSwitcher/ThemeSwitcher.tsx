@@ -26,7 +26,7 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
 
     return (
 
-        <div className={cl.switch} data-isOn={theme === 'app_dark_theme'} onClick={onToggleHandler}>
+        <div className={cl.switch} data-ison={theme === 'app_dark_theme'} onClick={onToggleHandler}>
             <motion.div
                 className={cl.handle}
                 layout

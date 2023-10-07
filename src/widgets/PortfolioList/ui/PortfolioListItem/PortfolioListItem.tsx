@@ -27,8 +27,8 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
     const returnIcons = useCallback(() => {
         const icons: ReactNode[] = [];
 
-        project.stacks.map((elem: any) => {
-            icons.push(<img src={elem} />);
+        project.stacks.map((elem: any, index: number) => {
+            icons.push(<img key={index} src={elem} />);
         })
 
         return icons;
@@ -98,6 +98,7 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                                             text={par}
                                             align='justify'
                                             size='xs'
+                                            key={par}
                                         />
                                     )
                                 }

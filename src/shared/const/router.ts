@@ -4,5 +4,4 @@ export enum AppRoutes {
 }
 
 export const getPathMain = () => '/';
-export const getPathNotFoundPage = () => '/not_found';
 

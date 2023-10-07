@@ -7,18 +7,33 @@ import js from '@/shared/assets/icons/instruments/js.png';
 import ts from '@/shared/assets/icons/instruments/ts.png';
 import { SkillsCard } from '@/shared/ui/SkillsCard/SkillsCard';
 
+// const skills = [
+//     {
+//         text: 'JavaScript',
+//         icons: [<img src={js} />]
+//     },
+//     {
+//         text: 'TypeScript',
+//         icons: [<img src={ts} />]
+//     },
+//     {
+//         text: 'JavaScript and TypeScript',
+//         icons: [<img src={js} />, <img src={ts} />]
+//     }
+// ]
+
 const skills = [
     {
         text: 'JavaScript',
-        icons: [<img src={js} />]
+        icons: <><img src={js} /></>
     },
     {
         text: 'TypeScript',
-        icons: [<img src={ts} />]
+        icons: <><img src={ts} /></>
     },
     {
         text: 'JavaScript and TypeScript',
-        icons: [<img src={js} />, <img src={ts} />]
+        icons: <><img src={js} /> <img src={ts} /></>
     }
 ]
 
@@ -41,11 +56,12 @@ export const HardSkills = memo(({ className }: HardSkillsProps) => {
             <VStack gap='16' max>
                 {
                     skills.map(skill =>
-                        <SkillsCard
-                            key={skill.text}
-                            text={skill.text}
-                            icons={skill.icons}
-                        />
+                        <div className={cl.cardWrapper} key={skill.text}>
+                            <SkillsCard
+                                text={skill.text}
+                                icons={skill.icons}
+                            />
+                        </div>
                     )
                 }
             </VStack>

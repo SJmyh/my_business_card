@@ -35,8 +35,8 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
     const returnIcons = useCallback(() => {
         const icons: ReactNode[] = [];
         
-        stacks.map((elem: any) => {
-            icons.push(<img src={elem} />);
+        stacks.map((elem: any, index: number) => {
+            icons.push(<img key={index} src={elem} />);
         })
 
         return icons;
@@ -124,6 +124,7 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
                                     <Text
                                         text={`>${task}`}
                                         align='justify'
+                                        key={task}
                                         size='xs'
                                     />
                                 )

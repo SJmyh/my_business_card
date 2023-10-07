@@ -7,7 +7,7 @@ import { Text } from '../Text';
 interface SkillsCardProps {
     className?: string;
     text: string;
-    icons?: ReactNode[];
+    icons?: ReactNode;
 }
 
 export const SkillsCard = memo((props: SkillsCardProps) => {

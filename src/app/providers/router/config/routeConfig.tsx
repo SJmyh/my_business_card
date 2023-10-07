@@ -1,6 +1,6 @@
 import { MainPage } from "@/pages/MainPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
-import { AppRoutes, getPathMain, getPathNotFoundPage } from "@/shared/const/router";
+import { AppRoutes, getPathMain } from "@/shared/const/router";
 import { RouteProps } from "react-router";
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -9,7 +9,7 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
         element: <MainPage />
     },
     [AppRoutes.NOT_FOUND_PAGE]: {
-        path: getPathNotFoundPage(),
-        element: <NotFoundPage />
+        path: "*",
+        element: <MainPage />
     },
 }
