@@ -17,8 +17,8 @@
 
 .burger{
     display: none !important;
-    width: 40px;
-    height: 30px;
+    width: 23px;
+    height: 60px;
     cursor: pointer;
 }
 
@@ -27,6 +27,11 @@
     height: 4px;
 
     background: var(--text-color);
+}
+
+.burgerWrapper{
+    width: 23px;
+    height: 60px;
 }
 
 @media screen and (max-width: 1500px) {

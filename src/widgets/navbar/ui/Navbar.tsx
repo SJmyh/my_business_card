@@ -5,6 +5,7 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import { Logo } from "@/shared/ui/Logo/Logo";
 import { ThemeSwitcher } from "@/features/themeSwitcher";
 import { Text } from "@/shared/ui/Text";
+import { Burger } from '@/features/burger/ui/Burger/Burger';
 
 export const Navbar = () => {
     const onSmooth = (id: string) => {
@@ -25,7 +26,15 @@ export const Navbar = () => {
             justify="between"
             className={classNames(cl.navbar, {}, ['container'])}
         >
-            <Logo />
+            <HStack gap='16'>
+                <div className={cl.burger}>
+                    <div className={cl.burgerWrapper}>
+                        <Burger onSmooth={onSmooth} />
+                    </div>
+                </div>
+
+                <Logo />
+            </HStack>
 
             <HStack
                 justify='between'
@@ -68,15 +77,7 @@ export const Navbar = () => {
                 </div>
             </HStack>
 
-            <HStack gap='16'>
-                <ThemeSwitcher />
-
-                <VStack className={cl.burger} justify='between'>
-                    <div className={cl.burger_one}/>
-                    <div className={cl.burger_two}/>
-                    <div className={cl.burger_three}/>
-                </VStack>
-            </HStack>
+            <ThemeSwitcher />
         </HStack>
     )
 }
