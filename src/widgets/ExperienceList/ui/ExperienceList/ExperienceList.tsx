@@ -40,9 +40,12 @@ const mockData: ExperienceProps[] = [
         companyName: 'ТрансКапиталБанк',
         post: 'Frontend-разработчик',
         tasks: [
-            '',
-            'Решение других проблем',
-            'Решение еще каких-то проблем',
+            'Настраивал webpack',
+            'Разрабатывал UI kit (storybook)',
+            'А затем проводил редизайн приложения',
+            'Писал тесты (unit, скриншотные)',
+            'Написал калькулятор для решения о выдачи банковской гарантии и максимальной суммы',
+            'Внедрил линтер в проект, что существенно сократило время code review',
         ],
         stacks: [react, redux, webpack, ts, babel, scss, css, js, consta, eslint, fsd, git, htmlIcon, jest, loki, rtl, storybook, stylelint,],
     },
@@ -51,11 +54,13 @@ const mockData: ExperienceProps[] = [
         companyName: 'Технопарк РГСУ',
         post: 'Frontend-разработчик',
         tasks: [
-            'Решение таких проблем',
-            'Решение других проблем',
-            'Решение еще каких-то проблем',
+            'Писал тесты',
+            'Переписывал JS на React',
+            'Разработал личный кабинет на платформе обучения (университет)',
+            'Внедрил линтер в проект, что существенно сократило время code review',
+            'Добавил локализацию платформы на английском и французском языках',
         ],
-        stacks: [css, git, htmlIcon, js, react, redux, ts],
+        stacks: [css, git, htmlIcon, js, eslint, stylelint, react, redux, ts],
     }
 ]
 

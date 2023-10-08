@@ -9,8 +9,8 @@ const MainPage = () => {
         <div>
             <AboutPage />
             <SkillsPage />
-            <PortfolioPage />
             <ExperiencePage />
+            <PortfolioPage />
             <ContactsPage />
         </div>
     )
