@@ -12,7 +12,7 @@ export const FourthPage = memo(({ className }: FourthPageProps) => {
 
     return (
         <div className={classNames(cl.FourthPage, {}, [cl[theme], className])}>
-            Регулрярно улучшаю <span className={cl.accentWord}>навыки</span> и изучаю новые <span className={cl.accentWord}>технологии</span>
+            Регулярно улучшаю <span className={cl.accentWord}>навыки</span> и изучаю новые <span className={cl.accentWord}>технологии</span>
         </div>
     );
 });
