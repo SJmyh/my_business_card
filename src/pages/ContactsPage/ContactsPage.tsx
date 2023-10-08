@@ -92,7 +92,7 @@ const ContactsPage = memo(({ className }: ContactsPageProps) => {
                 max
             >
                 <Text
-                    text="© SHESTOPALOV IVAN, 2022"
+                    text="© SHESTOPALOV IVAN, 2023"
                     variant='default'
                     size='xs'
                 />

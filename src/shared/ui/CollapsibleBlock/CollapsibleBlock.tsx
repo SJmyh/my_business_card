@@ -36,6 +36,7 @@ export const CollapsibleBlock = memo((props: CollapsibleBlockProps) => {
         <VStack
             className={classNames(cl.CollapsibleBlock, {}, [className])}
             max
+            gap='16'
         >
             <div>
                 {baseContent}

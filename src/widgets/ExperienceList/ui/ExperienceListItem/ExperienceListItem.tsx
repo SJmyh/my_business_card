@@ -104,7 +104,7 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
                     </HStack>
                 </VStack>
 
-                <VStack>
+                {/* <VStack>
                     <HStack
                         gap='32'
                         align='start'
@@ -131,7 +131,7 @@ export const ExperienceListItem = memo((props: ExperienceListItemProps) => {
                             }
                         </VStack>
                     </HStack>
-                </VStack>
+                </VStack> */}
             </HStack>
 
             <HStack

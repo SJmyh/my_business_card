@@ -1,4 +1,4 @@
-.SecondPage{
+.FourthPage{
     width: 380px;
     max-height: 400px;
     text-align: center;
@@ -21,13 +21,13 @@
 }
 
 @media screen and (max-width: 1300px) {
-    .SecondPage{
+    .FourthPage{
         width: 280px;
     }
 }
 
 @media screen and (max-width: 1050px) {
-    .SecondPage{
+    .FourthPage{
         width: 180px;
     }
 }
