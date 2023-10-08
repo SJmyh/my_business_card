@@ -11,6 +11,8 @@ export interface ProjectProps {
     about: string[],
     stacks: any,
     screen: any,
+    link?: string,
+    git: string,
 }
 
 interface PortfolioListItemProps {
@@ -65,12 +67,47 @@ export const PortfolioListItem = memo((props: PortfolioListItemProps) => {
                         size='xs'
                     />
 
+                    {
+                        project?.link
+                            ?
+                            <a target='_blank' href={project.link}>
+                                <Text
+                                    className={cl.linkText}
+                                    title={project.title}
+                                    align='justify'
+                                    size='m'
+                                    bold
+                                />
+                            </a>
+                            :
+                            <Text
+                                title={project.title}
+                                align='justify'
+                                size='m'
+                                bold
+                            />
+
+                    }
+                </HStack>
+
+                <HStack
+                    gap='32'
+                    align='start'
+                >
                     <Text
-                        title={project.title}
-                        align='justify'
-                        size='m'
-                        bold
+                        className={cl.body_title}
+                        text='GitHub: '
+                        variant='optional'
+                        size='xs'
                     />
+
+                    <a target='_blank' href={project.git}>
+                        <Text
+                            text='Ссылка на источник'
+                            align='justify'
+                            size='xs'
+                        />
+                    </a>
                 </HStack>
 
                 <HStack
