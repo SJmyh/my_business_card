@@ -48,7 +48,7 @@ const mockData: ProjectProps[] = [
             'Есть CI pipeline и pre commit хуки',
             'Работа с данными: Взаимодействие с данными осуществляется с помощью redux toolkit.',
             'Работа с feature-flags: Разрешено использование feature flags только с помощью хелпера toggleFeatures',
-
+            'На данный момент регистарация в приложении отключена, для проверки функционала можно воспользоваться профилем обычного юзера (username: user, пароль: 123)',
         ],
         screen: articles,
         git: 'https://github.com/Ivan77web/course-project',
