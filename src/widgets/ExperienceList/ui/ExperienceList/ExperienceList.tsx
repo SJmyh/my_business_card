@@ -61,6 +61,17 @@ const mockData: ExperienceProps[] = [
             'Добавил локализацию платформы на английском и французском языках',
         ],
         stacks: [css, git, htmlIcon, js, eslint, stylelint, react, redux, ts],
+    },
+    {
+        date: 'Сентябрь 2020 - Август 2021',
+        companyName: 'ПиксельПлюс',
+        post: 'Frontend-разработчик',
+        tasks: [
+            'Добавил адаптивность приложению',
+            'Переносил существующее JS приложение на React',
+            'Реализовывал различные виджеты на игровом сайте (донаты и пр)',
+        ],
+        stacks: [css, git, htmlIcon, js, react, redux],
     }
 ]
 
